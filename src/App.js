@@ -4,25 +4,24 @@ import Authentification from './components/Authentification';
 import Menu from './components/Menu';
 import Historique from './components/Historique';
 import { useState } from 'react';
+import Chambres from './components/Chambres';
 
 function App() {
 
-  const [client, setClient] = useState()
+  const [client, setClient] = useState({id:'1'})
 
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/auth' element={<Authentification setclient={setClient}/>}  />
-          <Route path='/historique' element={<Menu client={client} />} >
-            <Route index element={<Historique client={client} />} />
+          <Route path='/' element={<Menu client={client} />} >
+            <Route path='/historique' element={<Historique client={client} />} />
+            <Route path='/chambre' element={<Chambres />} />
           </Route>
-          <Route path='/chambre' element={<Menu client={client} />} >
-            <Route index element={<Historique />} />
-          </Route>
+          <Route path='/auth' element={<Authentification setclient={setClient} />} />
         </Routes>
       </BrowserRouter>
-      
+
     </div>
   );
 }

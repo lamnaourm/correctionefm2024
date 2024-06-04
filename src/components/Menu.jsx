@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
-import { Link, Navigate, Outlet } from 'react-router-dom'
+import { Link, navigate, Outlet, useNavigate } from 'react-router-dom'
 
 export default function Menu({client}) {
+
+  const navigate = useNavigate()
 
   useEffect(() => {
 
     if(!client)
-      Navigate('/auth')
+      navigate('/auth')
 
   },[])
 
