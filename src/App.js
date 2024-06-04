@@ -8,7 +8,7 @@ import Chambres from './components/Chambres';
 
 function App() {
 
-  const [client, setClient] = useState({id:'1'})
+  const [client, setClient] = useState()
 
   return (
     <div>
