@@ -13,13 +13,9 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Menu client={client} />} >
-            <Route path='/historique' element={<Historique client={client} />} />
-            <Route path='/chambre' element={<Chambres />} />
-          </Route>
-          <Route path='/auth' element={<Authentification setclient={setClient} />} />
-        </Routes>
+        <Route path='/' element={<Authentification setclient={setClient} />} />
+        <Route path='/historique/:idclient' element={<Historique />} />
+        <Route path='/chambres/:idclient' element={<Chambres />} />
       </BrowserRouter>
 
     </div>

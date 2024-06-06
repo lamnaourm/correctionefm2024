@@ -8,7 +8,7 @@ export default function Menu({client}) {
   useEffect(() => {
 
     if(!client)
-      navigate('/auth')
+      navigate('/')
 
   },[])
 
@@ -17,7 +17,7 @@ export default function Menu({client}) {
       <ul>
         <li><Link to='historique'>Historique des reservations</Link> </li>
         <li><Link to='Chambres'>Chambres</Link> </li>
-        <li><Link to='auth'>Deconnexion</Link> </li>
+        <li><Link to='/'>Deconnexion</Link> </li>
       </ul>
 
       <Outlet />
