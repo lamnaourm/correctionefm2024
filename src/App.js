@@ -16,6 +16,7 @@ function App() {
         <Route path='/' element={<Authentification setclient={setClient} />} />
         <Route path='/historique/:idclient' element={<Historique />} />
         <Route path='/chambres/:idclient' element={<Chambres />} />
+        <Route path='/reservation/:idclient/:idchambre' element={<Chambres />} />
       </BrowserRouter>
 
     </div>
